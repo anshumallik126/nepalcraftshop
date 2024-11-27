@@ -1,0 +1,274 @@
+
+.input-group .psw-show-btn
+    background: 0 0
+    position: absolute
+    right: 8px
+    top: 8px
+    z-index: 5
+.btn-like-a
+    border: none
+    box-shadow: none
+    outline: 0
+.forgot-psw
+    color: $color-primary
+    &:hover
+        color: $color-primary
+        text-decoration: none !important
+.form-check-input:focus
+    box-shadow: none
+.cs-validation .field .ui.prompt.label
+    background: 0 0!important
+    border: none!important
+    color: $color-primary !important
+.ui.form .field.error label
+    color: $color-primary
+.text-orange
+    color: $color-orange !important
+.theme-color
+    color: $body-text-color !important
+#cart_view_Modal .bg-secondary:hover
+    color: $white
+
+.cart-empty
+
+    display: grid
+    min-height: 200px
+    place-items: center
+
+    .svg-cart-icon svg
+        fill: #c3c3c3
+        height: 50px
+        width: 50px
+.bg-orange
+    background: $color-primary !important
+.cs-scrollbar
+    overflow-x: hidden
+    overflow-y: auto
+
+.table td, .table th
+    padding: 0.75rem
+
+.table>:not(caption)>*>*
+    border-bottom-width: 0
+.modal-dialog-centered
+    min-height: calc(100% - 3.5rem)
+.modal-scrollable .modal-body
+    overflow: hidden
+    overflow-y: auto
+    max-height: 73vh
+.nice-select .list
+    width: 100%
+.custom-control-input
+    position: absolute
+    left: 0
+    z-index: -1
+    width: 1rem
+    height: 45px
+    opacity: 0
+.text-right
+    text-align: right!important
+
+.border-none
+    border: none !important
+.rotate-180
+    transform: rotate(180deg)
+.form-group
+    margin-bottom: 1rem
+
+.cart-icon
+    width: 50px
+    height: 50px
+    line-height: 50px
+    border-radius: 50%
+    text-align: center
+    color: white
+    background: $color-primary
+    cursor: pointer
+    transition: .4s
+    display: grid
+    place-items: center
+
+    @media #{$medium-and-down}
+        width: 40px
+        height: 40px
+        line-height: 40px
+        .cart-num
+            min-height: 22px !important
+            min-width: 22px !important
+            font-size: .8rem !important
+
+    .cart-num
+        position: absolute
+        color: white
+        transition: .4s
+        background: $color-primary
+        border: 1px solid white
+        min-height: 25px
+        min-width: 25px
+        text-align: center
+        border-radius: 50%
+        left: unset
+        font-size: 1rem
+        right: -10px
+        top: -10px
+        height: 20px
+        width: 20px
+        line-height: 20px
+        &:hover
+            background: darken($color-primary, 10%)
+
+.cart-icon
+    position: relative
+.section-gap
+    padding: 80px 0
+
+.username
+    position: relative
+    &:hover
+        .sub-menu
+            top: calc(100% + 10px)
+            opacity: 1
+            visibility: visible
+    .user-sub
+        display: block
+    .sub-menu
+        position: absolute
+        top: 130%
+        left: -10px
+        background: white
+        min-width: 160px
+        padding: 10px
+        transition: .3s
+        opacity: 0
+        visibility: hidden
+        box-shadow: 1px 1px 5px rgb(0 0 0 / 10%)
+        line-height: 24px
+
+        @media #{$medium-and-down}
+            left: unset
+            right: -40px
+
+        @media #{$extra-large-and-down}
+
+        a
+            color: $color-darker
+            display: block
+            padding: 5px 10px
+            font-size: .9rem
+
+            i
+                min-width: 20px
+                text-align: center
+            &:hover
+                color: $color-orange
+.badge-warning
+    box-shadow: none
+    outline: none
+    &:hover, &:focus
+        background: darken($color-orange, 10%) !important
+        box-shadow: none !important
+        outline: none
+.order-now-page, .menu-page
+    .leftSidebar
+        @media #{$small-only}
+            .theiaStickySidebar
+                .search-food
+                    .input-group i
+                        top: 0 !important
+                    input
+                        height: 50px !important
+                .sidemenu
+                    h4
+                        font-size: 19px !important
+.btn-like-a
+    border: none
+    outline: none
+    box-shadow: none
+    &:focus
+        box-shadow: none
+        outline: none
+.modal
+    .modal-header
+        button
+            position: absolute
+            right: 0
+            top: 0
+            z-index: 5
+            background: $color-primary
+            border-radius: 50%
+            height: 20px
+            width: 20px
+            line-height: 20px
+            opacity: 1
+            color: white
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: .3s
+            outline: none
+            padding: 1rem 1rem
+            margin: -1rem -1rem -1rem auto
+            border: none
+            &:hover
+                opacity: .8
+            @media #{$small-only}
+                right: 18px
+                top: 18px
+                color: $color-primary
+                background: none
+                font-size: 2rem
+            span
+                font-size: 20px
+label
+    font-weight: 400 !important
+#user_login_Modal, #forgot_psw_Modal
+    .modal-header
+        padding-top: 0
+        padding-bottom: 0
+        border: none
+        .nav-tabs
+            justify-content: center
+            border: none
+            .nav-link
+                border: 1px solid transparent
+                border-radius: 0
+                flex: 0 0 50%
+                background: $color-secondary
+                color: white
+                text-align: center
+                &.active
+                    background: $color-primary
+    .modal-body
+        label
+            text-transform: capitalize
+        .loginbtn
+            background: $color-primary
+            color: white
+            border: none
+            padding: 8px
+            transition: .3s
+
+            &:hover
+                background: $color-secondary
+        .guest-loginbtn
+            background: $color-primary
+            color: white
+            border: none
+            padding: 8px
+            transition: .3s
+
+            &:hover
+                background: $color-secondary
+
+        .forgot-psw
+            &:hover
+                border-bottom: 1px solid $color-primary
+        .login_back
+            &:hover
+                color: $color-primary
+
+.svg-cart-icon
+    svg
+        height: 25px
+        width: 25px
+        fill: white

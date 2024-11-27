@@ -1,0 +1,73 @@
+/***************************************************************************************************/
+/****************************************** G.E.N.E.R.A.L ******************************************/
+/***************************************************************************************************/
+
+body
+   color: $body-text-color
+   font-size: $font-size
+   font-family: $font-body
+   background: #fff
+   overflow-x: hidden
+
+.btn:focus
+   box-shadow: none !important
+.form-control:focus
+   box-shadow: none !important
+a, a:hover, a:focus, a:active
+   text-decoration: none
+   outline: none
+   color: inherit
+
+h1,h5,h6
+   font-family: $font-body
+   font-weight: 800 !important
+   color: $text-color
+.container
+   max-width: 1630px
+.heading1
+   text-transform: capitalize
+   font-size: 50px
+   white-space: nowrap
+   line-height: 60px
+.heading2
+   text-transform: uppercase
+   font-size: 70px
+   line-height: 80px
+   @media #{$small-only}
+      font-size: 35px
+      line-height: 50px
+.pt-50
+   padding-top: 100px
+.padding-class
+   padding-top: 3rem
+   padding-bottom: 3rem
+   @media #{$small-only}
+      padding-top: 1.5rem
+      padding-bottom: 1.5rem
+.pb-50
+   padding-bottom: 100px
+p
+   margin-bottom: 0 !important
+img
+   height: 100%
+   width: 100%
+   object-fit: cover
+.modal-content
+   padding: 1.5rem 0.75rem
+   border-radius: 0
+.badge-warning
+   background-color: $color-orange
+.pt-70
+   padding-top: 70px
+.font-sm
+   font-size: 14px !important
+.text-yellow
+   color: $yellow !important
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+   -webkit-appearance: none
+   margin: 0
+
+/* Firefox */
+input[type=number]
+   -moz-appearance: textfield
