@@ -63,11 +63,14 @@ img
    font-size: 14px !important
 .text-yellow
    color: $yellow !important
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button
-   -webkit-appearance: none
-   margin: 0
-
-/* Firefox */
-input[type=number]
-   -moz-appearance: textfield
+@media #{$small-only}
+   .d-none-sm
+      display: none !important
+   .d-block-sm
+      display: block !important
+   .ps-15-sm-device
+      padding-left: 15px !important
+   .pt-3-sm
+      padding-top: 1rem !important
+   .mb-0-sm
+      margin-bottom: 0 !important

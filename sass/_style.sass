@@ -15,6 +15,8 @@
     display: flex
     align-items: center
     border-bottom: 1px solid rgba(0,0,0,.1)
+    @media #{$small-only}
+        display: none
     .social-icons
         display: flex
         align-items: center
@@ -61,7 +63,8 @@
         &.toggle
             right: 0
             opacity: 1
-
+            .navigation
+                margin-top: 30px
     &.onscroll
         background: #fff
         width: 100%
@@ -223,6 +226,14 @@
         color: #fff
     &:focus
         outline: none
+.close
+    float: right
+    font-size: 1.5rem
+    font-weight: 700
+    line-height: 1
+    color: #000
+    text-shadow: 0 1px 0 #fff
+    opacity: .5
 .animated
     animation-duration: 1s
     animation-fill-mode: both
@@ -260,7 +271,8 @@
             @media #{$large-and-down}
                 font-size: 40px
             @media #{$small-only}
-                font-size: 30px
+                font-size: 30px !important
+                line-height: 50px !important
         p.text-sm
             font-size: 16px
             line-height: 1.4
@@ -292,6 +304,7 @@
                     background: #fff
 .home-slider
     position: relative
+    z-index: 0
     .owl-carousel
         .owl-item.active .animate-2
             animation-duration: 0.5s
@@ -328,11 +341,11 @@
             align-items: center
             transition: matrix(1, 0, 0, 1, 0, 0)
             @media #{$extra-large-and-down}
-                height: 70vh
-            @media #{$large-and-down}
-                height: 70vh
-            @media #{$small-only}
                 height: auto
+            @media #{$large-and-down}
+                height: auto
+            @media #{$small-only}
+                height: 70vh
             .slider-content
                 padding: 150px 0
         .owl-prev
@@ -568,728 +581,11 @@
         i
             padding: 0 3px
             color: #ccc !important
-
-.shop-details-area
-    position: relative
-    margin-top: -100px
-    .sticy-product
-        position: absolute
-        top: 80px
-        left: 0rem
-        width: 50%
-        height: calc(100% - 6.25rem)
-        display: block
-        background: $secondary-color
-        @media #{$small-only}
-            position: relative
-            width: auto
-            background: transparent
-            margin-bottom: 25px
-            top: 40px
-    .product-thumbnail-wrapper
-        position: sticky
-        top: 120px
-        width: 50%
-        flex-direction: column
-        flex-wrap: wrap
-        align-items: flex-start
-        margin: auto
-        padding-bottom: 60px
-    .shop-item-details
-        padding-left: 46px
-        margin-top: 30px
-        @media #{$small-only}
-            padding-left: 0
-        @media #{$large-and-down}
-            padding-left: 10px
-        .breadcrumb
-            margin: 0px
-            text-align: center
-            display: inline-flex
-            .breadcrumb-item
-                font-size: 16px
-                font-weight: 500
-                color: $paragraph-color
-                padding-left: 5px
-                &.active
-                    color: $color-primary
-            .breadcrumb-item + .breadcrumb-item::before
-                float: left
-                padding-right: 5px
-                color: $paragraph-color
-                content: "-"
-        .price
-            font-weight: 700
-            margin-bottom: 0
-            color: $footer-text-color
-        .variation
-            margin-top: 30px
-            h6
-                font-size: 20px
-                margin-bottom: 20px
-            .size
-                padding: 0
-                margin: 0
-                li
-                    list-style: none
-                    display: inline-block
-                    &:first-child
-                        a
-                            margin-left: 0
-                    a
-                        height: 56px
-                        width: 56px
-                        display: inline-block
-                        border-radius: 50%
-                        background: $secondary-color
-                        text-align: center
-                        line-height: 56px
-                        font-weight: 500
-                        margin: 0 7px
-                        &:hover
-                            background: $color-primary
-                            color: $white
-            .single-select
-                background: $secondary-color
-                width: 100%
-        .cat
-            padding: 0
-            margin: 0
-            margin-bottom: 40px
-            li
-                list-style: none
-                display: inline-block
-                padding: 0 22px
-                @media #{$small-only}
-                    display: block
-                    padding: 0
-                @media #{$large-and-down}
-                    display: block
-                    padding: 0
-                &:first-child
-                    padding-left: 0
-        .shop-tabs .nav-pills
-            margin-bottom: 30px
-            .nav-item
-                &:first-child .nav-link
-                    padding-left: 0
-                &:last-child .nav-link
-                    padding-right: 0
-                .nav-link
-                    color: $footer-text-color
-                    font-size: 20px
-                    font-weight: 600
-                    padding: 0 24px
-                    @media #{$small-only}
-                        padding: 0 15px 0 0
-                    @media #{$large-and-down}
-                        padding: 0 15px 0 0
-                    &.active
-                        background: transparent
-                        color: $color-primary
-        .comment-area .media
-            display: flex
-            border-bottom: 1px solid #e5e5e5
-            padding-bottom: 25px
-            margin-bottom: 30px
-            .media-left
-                flex: none
-                margin-right: 20px
-            .media-body h6
-                margin-bottom: 6px
-        .shop-tabs .default-form-wrap
-            border: 0
-            padding: 0
-            margin: 0
-            .single-textarea-wrap
-                textarea
-                    font-size: 16px
-                    width: 100%
-                    height: 100%
-                    color: $paragraph-color
-                    background: $secondary-color
-                    border: 0
-                    border-radius: 6px
-                    width: 100%
-                    padding: 20px 30px 30px 30px
-                    transition: all 0.4s ease-in
-                    position: relative
-                    &:focus
-                        outline: none
-                        box-shadow: none
-    .entry-title
-        margin: 10px 0
-        color: $footer-text-color
-        font-weight: 600
-        font-size: 42px
-.table-quantity
-    form
-        font-size: 16px
-        border-bottom: none
-.single-input-wrap
-    border-radius: 6px
-    height: 54px
-    line-height: 54px
-    margin-bottom: 30px
-    input
-        background: $secondary-color
-        border: none
-        padding: 0 30px 2px 30px
-        font-size: 16px
-        width: 100%
-        height: 100%
-        color: $paragraph-color
-        transition: all 0.4s ease-in
-        position: relative
-.product-imgs
-    .img-display
-        overflow: hidden
-        .img-showcase
-            display: flex
-            width: 100%
-            transition: all 0.5s ease
-            img
-                min-width: 100%
-    .img-select
-        display: flex
-        margin-top: 30px
-        .img-item
-            margin: 0.3rem
-            width: 150px
-            height: 100%
-            img
-                width: 100%
-                height: 100%
-                display: block
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3)
-            margin-right: 0
-
-.related-products
-    .owl-theme .owl-nav
-        margin-top: 10px
-        opacity: 1
-        position: absolute
-        right: 0
-        top: -100px
-        button
-            position: initial
-            background: $secondary-color
-            transform: none
-            height: 56px
-            width: 56px
-            line-height: 56px
-            border-radius: 6px
-            color: $color-primary
-            margin-right: 10px
-            &:hover
-                background: $color-primary
-                color: $white
-.breadcrumb-item+.breadcrumb-item::before
-    float: left
-    padding-right: 0.5rem
-    color: $white
-    content: "-" !important
-.cart-area
-    .promotional-area
-        @media #{$small-only}
-            button
-                margin: 10px 0
-                width: 100%
-        .py-3
-            padding-top: 0.85rem!important
-            padding-bottom: 0.85rem!important
-    .table
-        margin-bottom: 0px
-        min-width: 900px
-        border-radius: 12px
-        thead
-            background: #F6F1E7
-            border: 0
-        tr th
-            font-size: 24px
-            font-weight: 600
-            text-align: center
-            @media #{$small-only}
-                font-size: 16px
-                vertical-align: middle
-                img
-                    width: 100%
-                    height: 100px
-            @media #{$large-and-down}
-                vertical-align: middle
-                img
-                    width: 100%
-                    height: 100px
-            &.blank
-                border-left: 0
-            &:first-child
-                border-radius: 12px 0 0 0
-                border: 0
-            &:last-child
-                border-radius: 0 12px 0 0
-
-    tbody tr
-        &:last-child th
-            border: 0
-        td
-            vertical-align: middle
-            background: $white
-            text-align: center
-            border-left: 1px solid rgba(41, 41, 41, 0.1)
-            font-size: 24px
-            font-weight: 500
-            &:first-child
-                border-left: 0
-            &.item-name
-                border-left: 0
-                text-align: left
-                .details
-                    padding: 33px 0
-                    ul
-                        padding: 0
-                        margin: 0
-                        li
-                            list-style: none
-                            color: $paragraph-color
-                            font-size: 16px
-                            font-weight: 500
-        th
-            background: $white
-            text-align: center
-    .order-cart-area
-        .order-cart
-            border-radius: 12px 12px 0 0
-            background: $white
-            padding: 23px 30px 20px
-            h5
-                margin-bottom: 22px
-            ul
-                padding: 0
-                margin: 0
-                li
-                    list-style: none
-                    color: $paragraph-color
-                    font-size: 20px
-                    font-weight: 600
-                    display: flex
-                    margin-bottom: 4px
-                    &:last-child
-                        margin-bottom: 0
-                    &.total
-                        color: $color-red
-                span
-                    margin-left: auto
-        .theme-btn
-            border-radius: 0 0 12px 12px !important
-            border: none !important
-            background: $color-orange !important
-            &:hover
-                background: $color-primary
-                color: $white !important
-                box-shadow: inset 400px 0 0 0 $color-primary
-.single-input-wrap input
-    border: none
-    padding: 0 30px 2px 30px
-    font-size: 16px
-    width: 100%
-    height: 100%
-    color: #5f5f5f
-    background: $white
-    transition: all 0.4s ease-in
-    position: relative
-.default-form-wrap .single-input-wrap
-    border-radius: 6px
-    height: 54px
-    line-height: 54px
-
-.sidebar-area .widget
-    margin-bottom: 35px
-    padding: 23px 30px 30px
-    border-radius: 6px
-    background: #F6F1E7
-    &.widget_search
-        padding: 0
-        border: 0
-        .search-form
-            position: relative
-            background: $white
-            border-radius: 6px
-            border-bottom: none
-            padding-top: 0
-            padding-bottom: 0
-            input
-                letter-spacing: 0.3px
-                color: $paragraph-color
-                width: 100%
-                font-size: 16px
-                font-weight: 400
-                border: 0
-                background: transparent
-                padding: 0 60px 0 24px
-                height: 56px
-                line-height: 56px
-                &:focus
-                    outline: none
-                    box-shadow: none
-            button
-                position: absolute
-                right: 0
-                border: 0
-                background: transparent
-                cursor: pointer
-                font-size: 20px
-                padding: 0 23px
-                height: 56px
-                line-height: 56px
-                top: 0
-                right: 0
-                color: $color-primary
-    .widget-title
-        margin-bottom: 19px
-        font-size: 24px
-        font-weight: 600
-        color: $footer-text-color
-        margin-bottom: 27px
-    &.widget_categories ul
-        margin: 0
-        padding: 0
-        li
-            list-style: none
-            margin-bottom: 20px
-            font-weight: 500
-            img
-                margin-right: 15px
-            span
-                margin-left: auto
-            a
-                color: $footer-text-color
-                display: flex
-                align-items: center
-    .widget_filter
-        .ui-widget.ui-widget-content
-            border: 0
-            border-radius: 50px
-            height: 10px
-            margin-bottom: 25px
-        .ui-widget-header
-            background: $yellow
-    &.widget-recent-post
-        ul
-            list-style: none
-            padding: 0
-            margin: 0
-            li
-                .media
-                    margin-bottom: 30px
-                    display: flex
-                    align-items: center
-            .media-left
-                margin-right: 12px
-                -webkit-box-flex: 0
-                flex: none
-                .media-body .price
-                    margin-top: 7px
-                img
-                    border-radius: 3px
-                    max-width: 100px
-                    height: auto
-.pagination
-    border: 0
-    display: inline-block
-    margin: 0px
-    .page-item
-        margin-right: 10px
-        display: inline-block
-        .page-link
-            border: 0
-            height: 56px
-            width: 56px
-            padding: 0px
-            background: $white
-            border-radius: 6px
-            color: $color-primary
-            text-align: center
-            line-height: 56px
-            box-shadow: none
-            font-size: 18px
-            transition: all 0.4s ease-in
-            outline: 0
-            &:hover
-                background: $color-primary
-                color: #fff
-        &.active .page-link
-            background: $color-primary
-            color: $white
-.single-item-wrap
-    position: relative
-    background-color: #fff
-    border-radius: 12px
-    padding: 22px 29px 24px
-    margin-bottom: 60px
-    transition: all 0.4s ease-in
-    .thumb
-        text-align: center
-        img
-            transition: all 0.4s ease-in
-            max-width: 100%
-            height: auto
-        a
-            position: absolute
-            top: 18px
-            right: 27px
-            font-size: 24px
-    .wrap-details
-        margin-top: 22px
-        h5
-            font-size: 20px
-        .wrap-footer
-            display: flex
-            align-items: center
-        .price
-            margin-left: auto
-            font-size: 20px
-            font-weight: 700
-            margin-bottom: 0
-    .btn-area
-        background-color: #fff
-        border-radius: 0 0 12px 12px
-        position: absolute
-        bottom: 0
-        left: 0
-        width: 100%
-        text-align: center
-        transition: all 0.4s ease-in
-        transform: translate(0px, 80%)
-        opacity: 0
-        visibility: hidden
-        z-index: 1
-        box-shadow: 0 30px 30px rgb(0 0 0 / 12%)
-        .btn
-            border-radius: 30px 30px 0 0
-            padding: 0 90px
-            height: 64px
-            line-height: 64px
-            background: $color-orange
-            color: $white
-            border: none
-            font-weight: bold
-    &:hover .btn-area
-        opacity: 1
-        visibility: visible
-        -webkit-transform: translate(0, 100%)
-        transform: translate(0, 100%)
-.bill-payment-wrap
-    h5
-        background: $secondary-color
-        border-radius: 12px 12px 0 0
-        margin-bottom: 0
-        padding: 10px 50px
-    .default-form-wrap
-        background: #fff
-        padding: 88px 50px 70px
-        border-radius: 0 0 12px 12px
-        margin-bottom: 30px
-        border-bottom: none
-        @media #{$small-only}
-            padding: 30px
-        label
-            font-size: 20px
-            font-weight: 500 !important
-            color: $footer-text-color
-            margin-bottom: 15px
-            position: relative
-            &:after
-                content: "*"
-                position: absolute
-                right: -12px
-                top: 0
-                color: $color-red
-        .single-input-wrap
-            position: relative
-            input
-                background: $secondary-color
-                border-radius: 6px
-.order-area
-    background: #fff
-    border-radius: 12px
-    .title
-        background: $secondary-color
-        border-radius: 12px 12px 0 0
-        margin-bottom: 0
-        padding: 10px 30px
-    .order-product
-        display: flex
-        padding: 38px 30px
-        border-bottom: 1px solid rgba(41, 41, 41, 0.1)
-        .thumb
-            margin-right: 20px
-            img
-                height: 56px
-        .details ul
-            padding: 0
-            margin: 0
-            li
-                list-style: none
-                color: $paragraph-color
-                font-size: 12px
-                font-weight: 500
-    .amount
-        margin: 0
-        padding: 30px
-        border-bottom: 1px solid rgba(41, 41, 41, 0.1)
-        li
-            list-style: none
-            color: $paragraph-color
-            font-size: 20px
-            font-weight: 600
-            display: flex
-            margin-bottom: 4px
-            &:last-child
-                margin-bottom: 0
-            &.total
-                color: $color-red
-            span
-                margin-left: auto
-    .payment-method
-        padding: 30px
-        h6
-            font-size: 20px
-            font-weight: 600
-            color: $paragraph-color
-            margin-bottom: 30px
-        ul
-            padding: 0
-            margin: 0
-            border: 1px solid rgba(41, 41, 41, 0.1)
-            border-radius: 6px
-            li
-                list-style: none
-                display: flex
-                padding: 20px
-                border-bottom: 1px solid rgba(41, 41, 41, 0.1)
-                align-items: center
-                transition: all 0.4s ease-in
-                .form-check
-                    margin-right: 20px
-                h6
-                    font-size: 16px
-                    color: $footer-text-color
-                    margin-bottom: 5px
-                img
-                    float: right
-                p
-                    font-size: 12px
-                    line-height: 18px
-                &:hover
-                    background: $secondary-color
-        .form-check
-            .form-check-input
-                width: 28px
-                height: 28px
-                margin-top: 0px
-                outline: 0
-                box-shadow: none
-                background: rgba(41, 41, 41, 0.1)
-                border: none
-            .form-check-input:checked[type=radio]
-                position: relative
-                background-image: none
-                background-color: #5ABB47
-                border: none !important
-                &:after
-                    content: "\f14a"
-                    font-family: "Font Awesome 5 Free"
-                    color: #fff
-                    display: block
-                    text-align: center
-                    margin-top: 2px
-    .btn
-        border-radius: 0 0 12px 12px
-        background: $color-orange
-        color: $white
-        border: none
-        padding: 20px
-        background: $color-orange
-        color: $white
-        font-weight: bold
-.price-input
-    width: 100%
-    display: flex
-    margin: 30px 0 35px
-    .field
-        display: flex
-        width: 100%
-        align-items: center
-        input
-            width: 100%
-            height: 100%
-            outline: none
-            font-size: 18px
-            margin-left: 0
-            border-radius: 5px
-            text-align: center
-            background: transparent
-            border: none
-            color: $paragraph-color
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button
-            -webkit-appearance: none
-    .separator
-        width: 10px
-        display: flex
-        font-size: 19px
-        align-items: center
-        justify-content: center
-        margin-left: 10px
-.slider
-    height: 10px
-    position: relative
-    background: #ddd
-    border-radius: 50px
-    .progress
-        height: 100%
-        left: 25%
-        right: 25%
-        position: absolute
-        border-radius: 5px
-        background: $color-orange
-.range-input
-    position: relative
-    input
-        position: absolute
-        width: 100%
-        height: 5px
-        top: -7px
-        background: none
-        pointer-events: none
-        -webkit-appearance: none
-        -moz-appearance: none
-    input[type="range"]::-webkit-slider-thumb
-        height: 20px
-        width: 12px
-        border-radius: 50px
-        background: $color-primary
-        pointer-events: auto
-        -webkit-appearance: none
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05)
-    input[type="range"]::-moz-range-thumb
-        height: 20px
-        width: 12px
-        border: none
-        border-radius: 50px
-        background: $color-primary
-        pointer-events: auto
-        -moz-appearance: none
-        box-shadow: 0 0 6px rgba(0, 0, 0, 0.05)
-@media #{$small-only}
-    .side-bar-range
-        .theme-btn
-            margin-top: 20px
 .service-wrap
     img
         border-radius: 10px
+        @media #{$small-only}
+            margin-top: 10px
 .footer
     background: linear-gradient(to right,#141414 0%,#ddc006 100%)
     background-size: cover
@@ -1418,6 +714,9 @@
     font-weight: 400
     text-transform: uppercase
     border-radius: 5px
+    @media #{$small-only}
+        margin-right: 0
+        padding: 30px
     &:hover
         background: linear-gradient(to right,#141414 37.36%,#ddc006 71.43%)
     .item
@@ -1428,6 +727,11 @@
         color: #fff
         width: 33.33%
         border-right: 1px solid #fff
+        @media #{$extra-large-and-down}
+            font-size: 2rem
+        @media #{$small-only}
+            font-size: 2rem
+            line-height: 40px
         &:last-child
             border-right: none
         .js-counter
@@ -1479,6 +783,8 @@
         transition: all 0.3s ease-in-out 0s
         background: #fff
         position: relative
+        @media #{$small-only}
+            margin-top: 30px
         &:hover
             .tm_author
                 img
@@ -1529,6 +835,8 @@
     position: absolute
     bottom: -100px
     left: 75px
+    @media #{$small-only}
+        display: none
 .item-3
     &::before
         content: ""
@@ -1541,6 +849,8 @@
         position: absolute
         top: -100px
         left: 0
+        @media #{$small-only}
+            display: none
     &::after
         content: ""
         width: 232px
@@ -1555,6 +865,8 @@
         background-position: 100% 100%, 0% 100%, 100% 0%, 100% 100%
         background-repeat: no-repeat
         border-radius: 50%
+        @media #{$small-only}
+            display: none
 .newsletter
     background: rgba(237,240,245,1)
     margin-left: 15px
@@ -1567,6 +879,8 @@
     position: relative
     margin-bottom: -200px
     z-index: 2 !important
+    @media #{$small-only}
+        padding: 30px
     .form-group
         font-size: 16px
         line-height: 20px
@@ -1598,6 +912,9 @@
             margin-bottom: 0
             background: linear-gradient(to right, #141414 0%, #ddc006 100%)
             border-radius: 5px
+    @media #{$small-only}
+        .p-style p
+            display: none
 .why_choose_item
     h3
         font-size: 18px
@@ -1612,3 +929,44 @@
         margin-top: 10px
     &:hover img
         transform: translateY(-10px)
+.sticky-icon
+    z-index: 3
+    position: fixed
+    top: 25%
+    right: 0%
+    width: 160px
+    display: flex
+    flex-direction: column
+
+    a
+        transform: translate(110px, 0px)
+        border-radius: 0
+        text-align: left
+        margin: 0
+        text-decoration: none
+        text-transform: capitalize
+        padding: 10px
+        font-size: 14px
+        transition: all 0.8s
+
+        &:hover
+            color: #FFF
+            transform: translate(0px, 0px)
+
+        i
+            transform: rotate(360deg)
+
+        i
+            background-color: transparent
+            height: 30px
+            width: 30px
+            color: #fff
+            text-align: center
+            line-height: 30px
+            border-radius: 50%
+            margin-right: 10px
+            transition: all 0.5s
+.icon
+    background-color: $color-primary
+    color: #FFF
+    border-bottom: 1px solid #fff

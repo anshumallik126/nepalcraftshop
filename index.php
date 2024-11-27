@@ -832,10 +832,10 @@ $pageName = 'home';
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 ps-5">
+            <div class="col-lg-6 ps-5 ps-15-sm-device pt-3-sm">
                 <div class="image-group">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-6">
                             <div class="place-holder-1">
                                 <img src="img/service-1.jpg" alt="">
                             </div>
@@ -843,7 +843,7 @@ $pageName = 'home';
                                 <img src="img/service-2.jpg" alt="">
                             </div>
                         </div>
-                        <div class="col-md-6 ml--10">
+                        <div class="col-md-6 col-6">
                             <div class="place-holder-1">
                                 <img src="img/service-3.jpg" alt="">
                             </div>
@@ -903,7 +903,7 @@ $pageName = 'home';
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="tm_single white_bg mb-5">
+                <div class="tm_single white_bg mb-5 mb-0-sm">
                     <div class="tm_top ul_li">
                         <div class="tm_author">
                             <img src="img/customer-2.jpg" alt="" loading="lazy">
@@ -1005,7 +1005,8 @@ $pageName = 'home';
                         <div class="ms-2">
                             <button class="btn theme-btn" type="submit" onclick="return subscribe_newsletter();"
                                 name="submit">
-                                Subscribe
+                                <i class="fas fa-arrow-right d-none d-block-sm"></i><span
+                                    class="d-none-sm">Subscribe</span>
                             </button>
                         </div>
                     </div>

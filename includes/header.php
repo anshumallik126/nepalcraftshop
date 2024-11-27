@@ -30,7 +30,7 @@
     <section class="top-bar">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-8">
+                <div class="col-lg-8 col-md-6 col-8">
                     <div class="pull-left d-flex flex-wrap align-items-center h-100 mt-1 mt-md-0 mt-sm-0">
                         <ul class="list-unstyled social-icons mb-0">
                             <li><a target="_blank" href="#"><i class="fa fa-map-marker-alt"></i>Store Locator</a></li>
@@ -40,7 +40,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-4 col-4 my-auto">
+                <div class="col-md-6 col-lg-4 col-4 my-auto">
                     <div
                         class="pull-right d-flex align-items-center justify-content-end justify-content-start-md-device mb-2 mb-md-0 mb-sm-0">
                         <span>Need help? Call us: (+800) 1234 5678 90 or info@company.com
@@ -68,24 +68,13 @@
                     <li><a href="#">Pashmina</a></li>
                     <li><a href="#">Company</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li class="d-md-none">
-                        <div class="d-flex">
-                            <div class="img">
-                                <img src="img/login.png" alt="">
-                            </div>
-                            <div>
-                                <a class="login" href="" data-bs-toggle="modal" data-bs-target="#user_login_Modal">Login
-                                    /
-                                    Register</a>
-                            </div>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
             <ul class="list-unstyled nav-icons mb-0 pt-1 pt-lg-0">
 
                 <!-- Before Login -->
-                <li>
+                <li class="d-none-sm">
                     <div class="d-flex">
                         <div class="img me-2">
                             <img src="img/login.png" alt="">
@@ -99,7 +88,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="ms-3">
+                <li class="ms-3 d-none-sm">
                     <div class="d-flex">
                         <div class="img me-2">
                             <img src="img/cart.png" alt="">
@@ -117,17 +106,43 @@
                         </div>
                     </div>
                 </li>
-
-                <!-- <li class="header-cart-icon">
+                <li class="d-none d-block-sm">
+                    <div class="username">
+                        <a class="user-sub mr-md-3 text-color text-nowrap" href="#">
+                            <span class="d-none d-md-inline theme-color">User</span>
+                            <span class="d-md-none"><i class="far fa-user"></i></span> <i
+                                class="fa fa-caret-down"></i></a>
+                        <ul class="sub-menu list-unstyled mb-0 p-2">
+                            <li><a class="text-nowrap" href="#"><i class="fa fa-tachometer-alt mr-2"></i>
+                                    Dashboard</a></li>
+                            <li><a class="text-nowrap" href="#"><i class="fa fa-list mr-2"></i> My
+                                    Orders</a></li>
+                            <li><a class="text-nowrap" href="#"><i class="fa fa-bookmark mr-2"></i>
+                                    My Reservation</a></li>
+                            <li><a class="text-nowrap" href="#"><i class="fa fa-trophy mr-2"></i>
+                                    Loyalty Points</a></li>
+                            <li><a class="text-nowrap" href="#"><i class="fa fa-sign-out-alt mr-2"></i>
+                                    Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="header-cart-icon d-none d-block-sm">
                     <a class="cart-icon ms-3" href="cart.php"><span
                             class="svg-cart-icon"><?php include 'img/cart.svg' ?></span>
                         <span class="cart-num">1</span></a>
-                </li> -->
-                <li><span id="menu-bar" class="d-inline-block ms-4"><i class="fa fa-bars text-dark fa-2x"></i></span>
+                </li>
+                <li><span id="menu-bar" class="d-inline-block ms-4"><i class="fa fa-bars text-dark"></i></span>
                 </li>
             </ul>
         </div>
     </section>
+</div>
+<div class="sticky-icon">
+    <a href="" class="icon"><i class="fa fa-align-justify"></i> Categories </a>
+    <a href="" class="icon"><i class="fa fa-shopping-cart"> </i> Cart </a>
+    <a href="" class="icon"><i class="fa fa-user"> </i> User</a>
+    <a href="" class="icon"><i class="fa fa-search"></i>Search </a>
+    <a href="" class="icon"><i class="fa fa-eye"> </i> Recent View </a>
 </div>
 <?php
 include 'login-modal.php';
