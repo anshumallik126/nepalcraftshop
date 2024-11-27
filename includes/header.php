@@ -74,37 +74,49 @@
             <ul class="list-unstyled nav-icons mb-0 pt-1 pt-lg-0">
 
                 <!-- Before Login -->
-                <li class="d-none-sm">
-                    <div class="d-flex">
+                <li class="me-4 d-none-sm">
+                    <a href="">
                         <div class="img me-2">
-                            <img src="img/login.png" alt="">
+                            <img src="img/search.png" alt="">
                         </div>
-                        <div class="login">
-                            <a href="" data-bs-toggle="modal" data-bs-target="#user_login_Modal">
-                                <b>Login</b>
-                            </a>
-                            <br>
-                            <a href=""><span>Or Register</span></a>
-                        </div>
-                    </div>
+                    </a>
                 </li>
-                <li class="ms-3 d-none-sm">
-                    <div class="d-flex">
-                        <div class="img me-2">
-                            <img src="img/cart.png" alt="">
-                        </div>
-                        <div class="login">
-                            <a href="cart.php">
-                                <b>My Cart</b>
-
+                <li class="d-none-sm">
+                    <a href="">
+                        <div class="d-flex">
+                            <div class="img me-2">
+                                <img src="img/login.png" alt="">
+                            </div>
+                            <div class="login">
+                                <a href="" data-bs-toggle="modal" data-bs-target="#user_login_Modal">
+                                    <b>Login</b>
+                                </a>
                                 <br>
-                                <span class="total-shopping-cart">
-                                    <span class="items_cart">0</span><span class="items_cart2"> item(s)</span><span
-                                        class="items_carts"> - $0.00 </span>
-                                </span>
-                            </a>
+                                <a href=""><span>Or Register</span></a>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                </li>
+
+                <li class="ms-3 d-none-sm">
+                    <a href="">
+                        <div class="d-flex">
+                            <div class="img me-2">
+                                <img src="img/cart.png" alt="">
+                            </div>
+                            <div class="login">
+                                <a href="cart.php">
+                                    <b>My Cart</b>
+
+                                    <br>
+                                    <span class="total-shopping-cart">
+                                        <span class="items_cart">0</span><span class="items_cart2"> item(s)</span><span
+                                            class="items_carts"> - $0.00 </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
                 </li>
                 <li class="d-none d-block-sm">
                     <div class="username">
